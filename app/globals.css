@@ -354,3 +354,15 @@ a { color: inherit; text-decoration: none; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
+.search-label { display: block; font-weight: 700; margin-bottom: 10px; }
+.recipe-search { width: 100%; max-width: 560px; padding: 15px 18px; border: 1px solid #aaa; border-radius: 12px; background: white; color: var(--ink); font: inherit; }
+.recipe-search:focus-visible, .recipe-card:focus-visible { outline: 3px solid #b04a2c; outline-offset: 4px; }
+.recipe-card { display: block; color: inherit; text-decoration: none; }
+.empty-state { padding: 36px; border: 1px dashed #aaa; border-radius: 16px; }
+.recipe-detail { padding: 48px 0 80px; }
+.recipe-detail header { margin: 40px 0; max-width: 760px; }
+.recipe-detail h1 { font-family: Georgia, serif; font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; }
+.recipe-detail__columns { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
+.recipe-detail li { padding-left: 8px; margin-bottom: 18px; line-height: 1.7; }
+@media (max-width: 700px) { .recipe-detail__columns { grid-template-columns: 1fr; gap: 20px; } }

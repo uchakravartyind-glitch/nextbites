@@ -1,8 +1,9 @@
 import type { Recipe } from "../data/recipes";
+import Link from "next/link";
 
 export default function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
-    <article className="recipe-card">
+    <Link href={`/recipe/${recipe.id}`} className="recipe-card">
       <div className={`recipe-card__visual recipe-card__visual--${recipe.accent}`}>
         <span aria-hidden="true">{recipe.emoji}</span>
         <p>{recipe.cuisine}</p>
@@ -16,10 +17,10 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
         </div>
         <h2>{recipe.title}</h2>
         <p>{recipe.description}</p>
-        <button className="recipe-card__action" type="button">
+        <span className="recipe-card__action">
           View recipe <span aria-hidden="true">→</span>
-        </button>
+        </span>
       </div>
-    </article>
+    </Link>
   );
 }
