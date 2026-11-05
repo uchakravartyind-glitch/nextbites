@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -21,15 +22,15 @@ function NavBar() {
   return (
     <header className="site-header">
       <nav className="nav-bar" aria-label="Primary navigation">
-        <a className="brand" href="/">
+        <Link className="brand" href="/">
           <span className="brand__mark" aria-hidden="true">N</span>
           <span>NextBites</span>
-        </a>
+        </Link>
 
         <div className="nav-bar__links">
-          <a href="/">Home</a>
-          <a href="#recipes">Recipes</a>
-          <a className="nav-bar__button" href="#recipes">Start cooking</a>
+          <Link href="/">Home</Link>
+          <Link href="/#recipes">Recipes</Link>
+          <Link className="nav-bar__button" href="/#recipes">Start cooking</Link>
         </div>
       </nav>
     </header>
