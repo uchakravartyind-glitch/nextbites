@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound() { return <main className="mx-auto max-w-xl px-6 py-32 text-center"><div className="text-7xl">🍽️</div><h1 className="mt-6 text-4xl font-bold">Recipe not found</h1><p className="mt-4 text-zinc-600">That recipe isn’t on our menu. Let’s find something delicious instead.</p><Link href="/" className="mt-8 inline-block rounded-full bg-orange-600 px-6 py-3 font-semibold text-white hover:bg-orange-700">Back to recipes</Link></main>; }
